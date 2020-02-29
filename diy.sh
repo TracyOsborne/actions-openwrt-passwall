@@ -7,6 +7,6 @@
 #=================================================
 # Modify default IP
 sed -i 's/192.168.1.1/192.168.2.1/g' package/base-files/files/bin/config_generate
-git clone https://https://github.com/user1121114685/koolproxyR
-./scripts/feeds update -a
-./scripts/feeds install -a
+
+echo 'Fix koolproxyR bug'
+sed -i "s/\$(ARCH),arm/\$(ARCH),aarch64/g" /home/runner/openwrt/package/ctcgfw/luci-app-koolproxyR/Makefile
