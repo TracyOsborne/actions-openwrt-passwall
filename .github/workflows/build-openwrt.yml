@@ -66,10 +66,9 @@ jobs:
      
     - name: Clone passwall code
       run: |
-        cd package
-        mkdir openwrt-packages
-        cd openwrt-packages
-        git clone https://github.com/Lienol/openwrt-package.git && git clone https://github.com/pymumu/smartdns.git
+        mkdir openwrt
+        cd openwrt
+        git clone https://github.com/Lienol/openwrt-package.git 
     
     - name: Update feeds
       run: cd openwrt && ./scripts/feeds update -a
